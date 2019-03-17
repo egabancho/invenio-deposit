@@ -1,6 +1,6 @@
 {#
 # This file is part of Invenio.
-# Copyright (C) 2016 CERN.
+# Copyright (C) 2016, 2019 CERN.
 #
 # Invenio is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License as
@@ -24,13 +24,15 @@
 {%- extends config.DEPOSIT_BASE_TEMPLATE %}
 
 {%- block css %}
-    {% assets "invenio_deposit_css" %}<link href="{{ ASSET_URL }}" rel="stylesheet">{% endassets %}
-    {{ super() }}
+{# assets "invenio_deposit_css" %}<link href="{{ ASSET_URL }}" rel="stylesheet">{% endassets #}
+{{ webpack['deposit_theme.css'] }}
+{{ super() }}
 {%- endblock css %}
 
 {%- block javascript %}
-  {% assets "invenio_deposit_dependencies_js" %}<script src="{{ ASSET_URL }}"></script>{% endassets %}
-  {% assets "invenio_deposit_js" %}<script src="{{ ASSET_URL }}"></script>{% endassets %}
+{{ webpack['deposit_app.js'] }}
+{# assets "invenio_deposit_dependencies_js" %}<script src="{{ ASSET_URL }}"></script>{% endassets #}
+{# assets "invenio_deposit_js" %}<script src="{{ ASSET_URL }}"></script>{% endassets #}
 {%- endblock javascript %}
 
 {%- block page_body %}

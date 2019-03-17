@@ -1,6 +1,6 @@
 {#
 # This file is part of Invenio.
-# Copyright (C) 2016 CERN.
+# Copyright (C) 2016, 2019 CERN.
 #
 # Invenio is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License as
@@ -24,13 +24,15 @@
 {%- extends config.DEPOSIT_BASE_TEMPLATE %}
 
 {%- block css %}
-    {{ super() }}
-    {% assets "invenio_search_ui_search_css" %}<link href="{{ ASSET_URL }}" rel="stylesheet">{% endassets %}
+{{ super() }}
+{# assets "invenio_search_ui_search_css" %}<link href="{{ ASSET_URL }}" rel="stylesheet">{% endassets #}
+{{ webpack['search_ui_theme.css'] }}
 {%- endblock css %}
 
 {%- block javascript %}
-  {{ super() }}
-  {% assets "invenio_search_ui_search_js" %}<script src="{{ ASSET_URL }}"></script>{% endassets %}
+{{ super() }}
+{# assets "invenio_search_ui_search_js" %}<script src="{{ ASSET_URL }}"></script>{% endassets #}
+{{ webpack['search_ui_app.js'] }}
 {%- endblock javascript %}
 
 {%- block body_inner %}
