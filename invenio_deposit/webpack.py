@@ -22,6 +22,7 @@
 # waive the privileges and immunities granted to it by virtue of its status
 # as an Intergovernmental Organization or submit itself to any jurisdiction.
 """JS/CSS bundles for deposit.
+
 You include one of the bundles in a page like the example below (using
 ``base`` bundle as an example):
  .. code-block:: html

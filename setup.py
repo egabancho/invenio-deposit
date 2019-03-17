@@ -133,7 +133,7 @@ setup(
             'js_dependecies',
         ],
         'invenio_assets.webpack': {
-            'invenio_deposit = invenio_deposit.bundles:deposit'
+            'invenio_deposit = invenio_deposit.webpack:deposit'
         },
         'invenio_i18n.translations': [
             'messages = invenio_deposit',
