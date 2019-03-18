@@ -30,6 +30,7 @@
 {%- endblock css %}
 
 {%- block javascript %}
+{{ super() }}
 {{ webpack['deposit_app.js'] }}
 {# assets "invenio_deposit_dependencies_js" %}<script src="{{ ASSET_URL }}"></script>{% endassets #}
 {# assets "invenio_deposit_js" %}<script src="{{ ASSET_URL }}"></script>{% endassets #}
