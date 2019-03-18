@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # This file is part of Invenio.
-# Copyright (C) 2016 CERN.
+# Copyright (C) 2016, 2019 CERN.
 #
 # Invenio is free software; you can redistribute it
 # and/or modify it under the terms of the GNU General Public License as
@@ -335,11 +335,11 @@ nitpick_ignore = [('py:class', 'Record'),
 intersphinx_mapping = {
     'https://docs.python.org/': None,
     'Flask': (
-        'http://flask.pocoo.org/docs/0.11', None
+        'http://flask.pocoo.org/docs/', None
     ),
     'Flask-Principal': (
         # NOTE readthedocs version is currently broken
-        'https://pythonhosted.org/Flask-Principal', None
+        'https://pythonhosted.org/Flask-Principal/', None
     ),
     'invenio-pidstore': (
         'https://invenio-pidstore.readthedocs.io/en/latest/', None
