@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # This file is part of Invenio.
-# Copyright (C) 2015, 2016, 2017 CERN.
+# Copyright (C) 2015, 2016, 2017, 2019 CERN.
 #
 # Invenio is free software; you can redistribute it
 # and/or modify it under the terms of the GNU General Public License as
@@ -50,6 +50,16 @@ extras_require = {
     'docs': [
         'Sphinx>=1.5.1',
     ],
+    # Elasticsearch version
+    'elasticsearch2': [
+        'invenio-search[elasticsearch2]>=1.1.0,<1.2.0',
+    ],
+    'elasticsearch5': [
+        'invenio-search[elasticsearch5]>=1.1.0,<1.2.0',
+    ],
+    'elasticsearch6': [
+        'invenio-search[elasticsearch6]>=1.1.0,<1.2.0',
+    ],
     'tests': tests_require,
 }
 
@@ -66,21 +76,17 @@ install_requires = [
     'Flask-BabelEx>=0.9.3',
     'Flask-Login>=0.3.2',
     'Flask>=0.11.1',
-    'SQLAlchemy-Continuum>=1.3',
     'SQLAlchemy-Utils[encrypted]>=0.32.6',
     'dictdiffer>=0.5.0.post1',
-    'elasticsearch>=2.0.0,<3.0.0',
-    'elasticsearch-dsl>=2.0.0,<3.0.0',
-    'invenio-assets>=1.0.0b6',
-    'invenio-db[versioning]>=1.0.0b3',
-    'invenio-files-rest>=1.0.0a14',
-    'invenio-jsonschemas>=1.0.0a3',
-    'invenio-oauth2server>=1.0.0a12',
-    'invenio-records-files>=1.0.0a8',
-    'invenio-records-rest>=1.0.0b5',
-    'invenio-records-ui>=1.0.0a8',
-    'invenio-search-ui>=1.0.0a5',
-    'invenio-search>=1.0.0a11',
+    'invenio-assets>=1.1.0', # TODO
+    'invenio-db[versioning]>=1.0.2',
+    'invenio-files-rest>=1.0.0a23',
+    'invenio-jsonschemas>=1.0.0',
+    'invenio-oauth2server>=1.0.2',
+    'invenio-records-files>=1.0.0a11',
+    'invenio-records-rest>=1.2.1',
+    'invenio-records-ui>=1.0.1',
+    'invenio-search-ui>=1.1.0',
 ]
 
 packages = find_packages()
